@@ -1,0 +1,28 @@
+package collectiondemo;
+
+//Student-->ComparableDemo
+//use of Comparable interface----to sort user defined objects based on single field(age,marks etc.)
+public class Student implements Comparable<Student>{
+	
+	int rollNo;
+	String name;
+	int age;
+	
+	public Student(int rollNo, String name, int age) {
+		this.rollNo = rollNo;
+		this.name = name;
+		this.age = age;
+	}
+	
+	@Override
+	public int compareTo(Student o) {
+		
+		if(age==o.age)
+		return 0;
+		else if(age>o.age) //else if(age<o.age) //descending order
+			return 1;
+		else
+		return -1;
+	}
+
+}
